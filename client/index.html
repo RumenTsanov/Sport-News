@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+    <!--  Header Section-->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-inverse navbar-static-top navbar-toggleable-sm">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-3">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/football">FOOTBALL</a></li>
+                    <li><a href="#/basketball">BASKETBALL</a></li>
+                    <li><a href="#/volleyball">VOLLEYBALL</a></li>
+                    <li><a href="#/tennis">TENNIS</a></li>
+                    <li><a href="#/box">FIGHT SPORTS</a></li>
+                    <li><a href="#/formula1">FORMULA 1</a></li>
+                    <li><a href="#/rugby">RUGBY</a></li>
+                    <li><a href="#/water-sports">WATER SPORTS</a></li>
+                    <li><a href="#/athletics">ATHLETICS</a></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+
+    <!--  Content Area-->
+    <div class="container">
+        <div id="controls-logo">
+            <div id="logo">
+                <a href="#/home"><img src="./images/logo.png"></a>
+            </div>
+            <div id="controls">
+                <div id="butons-login">
+                    <a href="#"><i class="fa fa-facebook-square" style="font-size:20px"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square" style="font-size:20px"></i></a>
+                    <a href="#"><i class="fa fa-google-plus-square" style="font-size:20px"></i></a>
+                    <a href="#"><i class="fa fa-youtube-square" style="font-size:20px"></i></a>
+                    <a href="#"><i class="fa fa-vimeo-square" style="font-size:20px"></i></a>
+                    <a href="#"><i class="fa fa-pinterest-square" style="font-size:20px"></i></a>
+                    <a href="#" id="login-link" data-toggle="modal" data-target="#myModal">Login</a> / <a href="#" id="signup-link" data-toggle="modal" data-target="#myModal1">Signup</a>
+                </div>
+
+                <div id="search">
+                    <input class="search" placeholder="  Enter your key word!"><button class="btn-search">SEARCH</button>
+                </div>
+            </div>
+        </div>
+        <div id="content"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-head">Login</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="col-md-12">
+                        <div class="row text-center">
+                            <div class="col-md-4 col-sm-12">
+                                <button type="button" class="btn btn-primary btn-block">Facebook</button>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <button type="button" class="btn btn-info btn-block">Twitter</button>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <button type="button" class="btn btn-danger btn-block">Google+</button>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder="UserName">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input-lg" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger btn-lg btn-block modal-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-head">Signup</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="col-md-12">
+                        <div class="row text-center">
+                            <div class="col-md-4 col-sm-12">
+                                <button type="button" class="btn btn-primary btn-block">Facebook</button>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <button type="button" class="btn btn-info btn-block">Twitter</button>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <button type="button" class="btn btn-danger btn-block">Google+</button>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <input id="userNameReg" type="text" class="form-control input-lg" placeholder="UserName" class="userName">
+                        </div>
+                        <div class="form-group">
+                            <input id="emailReg" type="email" class="form-control input-lg" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input id="passReg" type="password" class="form-control input-lg" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <a href="#/post-user" id="signup-btn" class="btn btn-danger btn-lg btn-block modal-btn">Submit</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/navigo/lib/navigo.js"></script>
+    <script src="./bower_components/handlebars/handlebars.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="./template-loader.js"></script>
+    <script src="./requester.js"></script>
+    <script src="./data.js"></script>
+    <script src="./routing.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

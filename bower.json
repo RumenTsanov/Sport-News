@@ -1,0 +1,17 @@
+{
+  "name": "final-exam",
+  "authors": [
+    "RumenTsanov <rumentsanov88@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

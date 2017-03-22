@@ -1,0 +1,40 @@
+h4 {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.main-2>.main-2-1>a>img {
+    width: 240px;
+    height: 140px;
+}
+
+.spcial-heading {
+    position: absolute;
+    top: 37%;
+    left: 0;
+}
+
+.spcial-heading-1 {
+    position: absolute;
+    top: 87%;
+    left: 0;
+}
+
+.main-2>.main-2-1:first-child {
+    padding-bottom: 2px;
+}
+
+.main-aside {
+    display: inline-block;
+    padding-left: 735px;
+}
+
+.main-aside>a>img {
+    width: 350px;
+    height: 280px;
+}
