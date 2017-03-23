@@ -5,6 +5,10 @@ class Data {
         return ajaxRequester.get('/api/news');
     }
 
+    getDataById(newsId) {
+        return ajaxRequester.getById('/api/news/' + newsId);
+    }
+
     postData() {
         $('#signup-btn').on('click', function() {
             let username = $('#userNameReg').val();

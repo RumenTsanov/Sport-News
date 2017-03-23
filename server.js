@@ -59,6 +59,16 @@ apiRouter.get('/news', (req, res, next) => {
         })
 });
 
+apiRouter.get('/news/:uri', (req, res, next) => {
+    db['main-news']
+        .find({ uri: req.params.uri }, (err, news) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json(news);
+        })
+});
+
 apiRouter.get('/users', (req, res, next) => {
     db['users']
         .find({}, (err, users) => {

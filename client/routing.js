@@ -9,7 +9,7 @@ const router = {
                 '/home': () => {
                     data.getData()
                         .then((dataObj) => {
-                            console.log(dataObj[0]);
+
                             templateLoader.compile('home')
                                 .then(function(tempalte) {
                                     let mainNews = {
@@ -39,12 +39,18 @@ const router = {
                 }
             })
             .on({
-                '/single-news': () => {
-                    templateLoader.compile('single-news')
-                        .then(function(tempalte) {
-                            $('#content').html(tempalte);
+                '/single-news/:uri': (params) => {
+                    data.getDataById(params.uri)
+                        .then((dataObj) => {
+                            console.log(dataObj);
+                            templateLoader.compile('single-news')
+                                .then(function(tempalte) {
+                                    $('#content').html(tempalte(dataObj[0]));
+                                });
                         });
+
                 }
+
             })
             .on({
                 '/': () => {
