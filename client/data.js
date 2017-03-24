@@ -5,8 +5,23 @@ class Data {
         return ajaxRequester.get('/api/news');
     }
 
-    getDataById(newsId) {
-        return ajaxRequester.getById('/api/news/' + newsId);
+    getUsers() {
+        return ajaxRequester.get('/api/users');
+    }
+
+    putComment() {
+        let uri = 'connermacgregot',
+            options = {
+                data: 'comment'
+            };
+        return ajaxRequester.put(`/api/news/:${uri}`, options);
+    }
+
+    getDataByURI(newsURI) {
+        return ajaxRequester.get('/api/news/' + newsURI);
+    }
+    getDataByCategory(newsCategory) {
+        return ajaxRequester.get('/api/news/' + newsCategory);
     }
 
     postData() {
@@ -14,9 +29,6 @@ class Data {
             let username = $('#userNameReg').val();
             let email = $('#emailReg').val();
             let password = $('#passReg').val();
-
-            console.log('POST ...');
-
             if (username === '' || email === '' || password === '') {
                 throw new Error('Invalid registration!');
             } else {
@@ -34,9 +46,33 @@ class Data {
                 $('#emailReg').val('');
                 $('#passReg').val('');
                 $("#myModal1 .close").click();
-                $('#butons-login').html('Welcome! <a href="#"> Logout!</a>');
+                $('#butons-login').html(`Welcome ${username}! <a href="#/user-logout"> Logout!</a>`);
                 return ajaxRequester.post('/api/users', options);
             }
+        });
+    }
+    putData() {
+        $('#login-btn').on('click', function() {
+            // let username = $('#userNameLog').val();
+            // let password = $('#passLog').val();
+            // if (username === '' || password === '') {
+            //     throw new Error('Invalid Log In!');
+            // } else {
+
+            //     let user = {
+            //         username: username,
+            //         password: password
+            //     };
+            //     console.log(user);
+            //     let options = {
+            //         data: user
+            //     }
+            //     $('#userNameLog').val('');
+            //     $('#passLog').val('');
+            //     $('#myModal .close').click();
+            //     $('#butons-login').html('Welcome! <a href="#"> Logout!</a>');
+            //     return ajaxRequester.put('/api/users', options);
+            // }
         });
     }
 }

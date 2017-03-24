@@ -69,7 +69,8 @@
                 </div>
 
                 <div id="search">
-                    <input class="search" placeholder="  Enter your key word!"><button class="btn-search">SEARCH</button>
+                    <input id="search-criteria" type="text" class="search" placeholder="  Enter your key word!">
+                    <button id="search-button" class="btn-search">SEARCH</button>
                 </div>
             </div>
         </div>
@@ -101,13 +102,13 @@
                         </div>
                         <hr />
                         <div class="form-group">
-                            <input type="text" class="form-control input-lg" placeholder="UserName">
+                            <input id="userNameLog" type="text" class="form-control input-lg" placeholder="UserName">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control input-lg" placeholder="Password">
+                            <input id="passLog" type="password" class="form-control input-lg" placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-danger btn-lg btn-block modal-btn">Submit</button>
+                            <a href="#/put-user" id="login-btn" class="btn btn-danger btn-lg btn-block modal-btn">Submit</a>
                         </div>
                     </form>
                 </div>

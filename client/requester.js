@@ -30,9 +30,6 @@ const ajaxRequester = (() => {
         get(url, options) {
             return this._sendAjax('GET', url, options);
         }
-        getById(url, options) {
-            return this._sendAjax('GET', url, options);
-        }
 
         post(url, options) {
             return this._sendAjax('POST', url, options);

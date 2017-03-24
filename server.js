@@ -68,6 +68,28 @@ apiRouter.get('/news/:uri', (req, res, next) => {
             res.json(news);
         })
 });
+apiRouter.get('/news/:category', (req, res, next) => {
+    db['main-news']
+        .find({ category: 'FOOTBALL' }, (err, news) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json(news);
+        })
+});
+
+apiRouter.put('/news/:uri', (req, res, next) => {
+    db['main-news'].findAndModify({
+        query: { uri: req.params.uri },
+        update: { $push: { 'comments': req.body } },
+        new: true
+    }, (err, comment) => {
+        if (err) {
+            res.send(err);
+        }
+        res.json(comment);
+    })
+});
 
 apiRouter.get('/users', (req, res, next) => {
     db['users']

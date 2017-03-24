@@ -23,27 +23,29 @@
 
     <article>
         <section class="single-news-article">
-        <h3>Real Madrid boss Perez is ready to offer new five year deal to Sergio Ramos!</h3>
-        <p class="single-news-subhead">BY RUMEN TSANOV &nbsp;&nbsp IN <a href="#">FOOTBALL</a> &nbsp;&nbsp  27 FEBRUARY 2017</p>
+        <h3>{{this.title}}</h3>
+        <p class="single-news-subhead">BY {{this.author}} &nbsp;&nbsp IN <a href="#/">{{this.category}}</a> &nbsp;&nbsp  {{this.date}}</p>
         <p class="single-news-content">
-        <img src="../images/chelsea.jpg">
+        <img src="{{this.img}}">
         {{this.content}}
         </p>
-        <iframe width="92%" height="315" style="margin-left: 20px" src="https://www.youtube.com/embed/XGSy3_Czz8k">
+        {{#if this.videoURL}}
+        <iframe width="92%" height="315" style="margin-left: 20px" src="{{this.videoURL}}">
         </iframe>
+        {{/if}}
        </section>
     </article>
     <form class="comments-form">
     <h6 class="comments-head">Comments:</h6>
-    {{#if comments}}
-    {{#each comments}}
+    {{#if this.comments}}
+    {{#each this.comments}}
     <div class="comment">
-        <h5>{{this.username}} </h5>
+        <h5>From: {{this.username}} </h5>
         <p>{{this.content}}</p>
     </div>
     {{/each}}
     {{/if}}
     <textarea class="comments-area" placeholder="Enter your comment here!"></textarea>
-    <button class="comments-btn">Submit</button>
+    <button class="comments-buttton">Submit</button>
     </form>
 </main>

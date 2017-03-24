@@ -247,8 +247,8 @@ h4 {
     padding-right: 20px;
     padding-top: 6px;
     overflow: hidden;
-    top: 28%;
-    height: 84px;
+    top: 51.5%;
+    height: 50px;
     text-overflow: ellipsis;
 }
 
@@ -446,8 +446,6 @@ h4 {
     height: 80px;
     float: right;
     margin-right: 20px;
-    margin-left: 10px;
-    margin-bottom: 5px;
     padding-top: 3px;
 }
 
@@ -456,7 +454,8 @@ h4 {
     font-size: 11px;
     margin-right: 20px;
     height: 150px;
-    overflow-y: hidden
+    overflow-y: hidden;
+    text-overflow: ellipsis;
 }
 
 .sub-news-article>a {
@@ -814,7 +813,7 @@ main {
     background-color: #E9E9E9;
 }
 
-.comments-btn {
+.comments-buttton {
     width: 95%;
     height: 50px;
     color: white;
