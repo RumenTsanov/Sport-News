@@ -5,11 +5,25 @@ body {
     min-height: 100%;
 }
 
+.header {
+    width: 100%;
+    height: 120px;
+    background-color: #262626;
+}
+
+.header-banner {
+    width: 700px;
+    height: 90px;
+    margin-top: 15px;
+    margin-left: 24%;
+}
+
 
 /* NavBar Start*/
 
 nav {
     background-color: #0e0e0e;
+    border-top: 1px solid #2c2c2c;
 }
 
 .navbar-nav {
@@ -348,9 +362,9 @@ h4 {
     -webkit-transform: translateX(100%);
     transform: translateX(1000%);
     /* Apply animation to this element */
-    -moz-animation: example1 20s linear infinite;
-    -webkit-animation: example1 20s linear infinite;
-    animation: example1 20s linear infinite;
+    -moz-animation: example1 15s linear infinite;
+    -webkit-animation: example1 15s linear infinite;
+    animation: example1 15s linear infinite;
 }
 
 

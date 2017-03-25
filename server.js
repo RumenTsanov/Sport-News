@@ -68,12 +68,13 @@ apiRouter.get('/news/:uri', (req, res, next) => {
             res.json(news);
         })
 });
-apiRouter.get('/news/:category', (req, res, next) => {
+apiRouter.get('/categories/:category', (req, res, next) => {
     db['main-news']
         .find({ category: 'FOOTBALL' }, (err, news) => {
             if (err) {
                 res.send(err);
             }
+            console.log(news);
             res.json(news);
         })
 });

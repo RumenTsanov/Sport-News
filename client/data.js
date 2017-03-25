@@ -21,7 +21,7 @@ class Data {
         return ajaxRequester.get('/api/news/' + newsURI);
     }
     getDataByCategory(newsCategory) {
-        return ajaxRequester.get('/api/news/' + newsCategory);
+        return ajaxRequester.get('/api/categories/' + newsCategory);
     }
 
     postData() {

@@ -87,7 +87,7 @@ const router = {
                 }
             })
             .on({
-                '/football': (params) => {
+                '/categories/:category': (params) => {
                     data.getDataByCategory(params.category)
                         .then((dataObj) => {
                             console.log(dataObj);
