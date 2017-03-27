@@ -122,6 +122,7 @@ nav {
 }
 
 .btn-search {
+    margin-left: -5px;
     width: 80px;
     height: 40px;
     border: 1px solid white;
@@ -185,6 +186,14 @@ s:-moz-placeholder {
     margin-left: 25px;
     height: 100%;
     overflow: hidden;
+}
+
+footer {
+    margin-top: 130%;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #686868;
+    width: 97%;
 }
 
 .modal-btn {
@@ -426,6 +435,7 @@ h4 {
     position: relative;
     display: inline-block;
     width: 256px;
+    height: 265px;
     margin-top: 5px;
     margin-right: -10px;
     margin-left: 20px;
@@ -442,6 +452,7 @@ h4 {
 .sub-news-article>h5 {
     height: 30px;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .sub-news-article>h5>a {
@@ -461,6 +472,7 @@ h4 {
     float: right;
     margin-right: 20px;
     padding-top: 3px;
+    margin-left: 5px;
 }
 
 .sub-news-article>p {
@@ -468,8 +480,8 @@ h4 {
     font-size: 11px;
     margin-right: 20px;
     height: 150px;
-    overflow-y: hidden;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .sub-news-article>a {
@@ -486,7 +498,7 @@ h4 {
 .date {
     color: #b4b4b4;
     display: inline;
-    margin-left: 50px;
+    margin-left: 90px;
     font-family: 'Open Sans';
     font-size: 12px;
     font-style: italic;
@@ -562,11 +574,11 @@ main {
 
 .news-content {
     height: 280px;
-    overflow-y: hidden;
-    text-overflow: ellipsis;
     font-family: 'Open Sans';
     font-size: 14px;
     margin-bottom: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .read-more-btn {
@@ -738,7 +750,7 @@ main {
 /* CategoriesPages */
 
 .categories {
-    margin-top: 5px;
+    margin-top: -20px;
     margin-left: -2px;
 }
 
@@ -748,7 +760,7 @@ main {
     background-color: #ffffff;
     border-radius: 3px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 30px;
 }
 
@@ -835,6 +847,7 @@ main {
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    padding-top: 12px;
     /* IE10+ */
     background-image: -ms-linear-gradient(top, #BE1717 0%, #a41010 100%);
     /* Mozilla Firefox */
@@ -849,7 +862,8 @@ main {
     background-image: linear-gradient(to bottom, #BE1717 0%, #a41010 100%);
 }
 
-.comments-btn:hover {
+.comments-buttton:hover {
+    text-decoration: none;
     /* IE10+ */
     background-image: -ms-linear-gradient(top, #FF3D3D 0%, #E30000 100%);
     /* Mozilla Firefox */
@@ -877,9 +891,9 @@ main {
 .comment>h5 {
     font-size: 16px;
     margin-left: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #222222;
     margin-right: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .comment>p {
@@ -891,7 +905,7 @@ main {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     #main-news {
-        margin-left: 60px;
+        margin-left: 0px;
         width: 80%;
     }
     .aside {
@@ -914,7 +928,7 @@ main {
         display: none;
     }
     main {
-        margin-left: 60px;
+        margin-left: 0px;
         width: 80%;
     }
     .categories {
@@ -955,6 +969,9 @@ main {
     .container {
         margin-right: 140px;
     }
+    .header {
+        margin-right: 20%;
+    }
 }
 
 
@@ -982,6 +999,9 @@ main {
     .container {
         margin-right: 150px;
     }
+    .header {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -1002,6 +1022,9 @@ main {
     }
     .container {
         margin-right: 145px;
+    }
+    .header {
+        display: none;
     }
 }
 
@@ -1027,6 +1050,9 @@ main {
     .container {
         margin-right: 145px;
     }
+    .header {
+        display: none;
+    }
 }
 
 
@@ -1043,6 +1069,9 @@ main {
         display: none;
     }
     .main-aside {
+        display: none;
+    }
+    .header {
         display: none;
     }
 }
@@ -1095,6 +1124,9 @@ main {
     .live-news {
         display: block;
     }
+    #sub-news {
+        display: block;
+    }
 }
 
 
@@ -1103,5 +1135,8 @@ main {
 @media only screen and (min-width: 1824px) {
     #controls {
         margin-right: 975px;
+    }
+    .header-banner {
+        margin-left: 36%;
     }
 }

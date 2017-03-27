@@ -41,11 +41,11 @@
     {{#each this.comments}}
     <div class="comment">
         <h5>From: {{this.username}} </h5>
-        <p>{{this.content}}</p>
+        <p>{{this.value}}</p>
     </div>
     {{/each}}
     {{/if}}
-    <textarea class="comments-area" placeholder="Enter your comment here!"></textarea>
-    <button class="comments-buttton">Submit</button>
+    <textarea id="comments-text" class="comments-area" placeholder="Enter your comment here!" name="comment"></textarea>
+    <a href="#/comment" class="comments-buttton btn">Submit</a>
     </form>
 </main>

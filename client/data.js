@@ -9,12 +9,8 @@ class Data {
         return ajaxRequester.get('/api/users');
     }
 
-    putComment() {
-        let uri = 'connermacgregot',
-            options = {
-                data: 'comment'
-            };
-        return ajaxRequester.put(`/api/news/:${uri}`, options);
+    putNewsComment(uri, options) {
+        return ajaxRequester.put('/api/news/' + uri, options);
     }
 
     getDataByURI(newsURI) {

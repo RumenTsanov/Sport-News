@@ -1,12 +1,12 @@
 <div id="main-news" class="row">
     <div class="news main-1">
-        <a href="#/single-news/{{main1.uri}}"><img src={{main1.img}} class="main-image1">
-        <h4 class="special-heading">{{main1.title}}<h4></a>
+        <a href="#/single-news/{{main2.uri}}"><img src={{main2.img}} class="main-image1">
+        <h4 class="special-heading">{{main2.title}}<h4></a>
     </div>
     <div class="news main-2">
     <div class="main-2-1 main2-hoverable">
-         <a href="#/single-news/{{main2.uri}}"><img src={{main2.img}} class="main-image2">
-        <h4 class="spcial-heading-1">{{main2.title}}<h4></a>
+         <a href="#/single-news/{{main9.uri}}"><img src={{main9.img}} class="main-image2">
+        <h4 class="spcial-heading-1">{{main9.title}}<h4></a>
     </div>
     <div class="main-2-1 main3-hoverable">
         <a href="#/single-news/{{main3.uri}}"><img src={{main3.img}} class="main-image3">
@@ -18,7 +18,7 @@
         </div>
     </div>
 <div class="live-news example1">
-    <p><a href="#/single-news/{{main4.uri}}">{{main4.title}} IN {{main4.category}}</a></p>
+    <p><a href="#/single-news/{{main4.uri}}" id="liveNews">{{main4.title}}</a></p>
 </div>
 
 <div id="sub-news">
@@ -34,7 +34,7 @@
     <h5><a href="#/single-news/{{main5.uri}}">{{main5.title}}</a></h5>
     <img src="{{main5.img}}"/>
     <p>{{main5.content}}</p>
-    <a href="#/single-news/{{main5.uri}}">READ MORE</a> <p class="date">{{main5.data}}</p>
+    <a href="#/single-news/{{main5.uri}}">READ MORE</a> <p class="date">{{main5.date}}</p>
 </div>
 <div class="sub-news-article">
     <h6>{{main10.category}}</h6>
@@ -66,9 +66,9 @@
     <p>{{main7.content}}</p>
     </div>
     <div class="aside-article">
-    <h5><a href="#/single-news/{{main9.uri}}">{{main9.title}}</a></h5>
-    <img src="{{main9.img}}"/>
-    <p>{{main9.content}}</p>
+    <h5><a href="#/single-news/{{main1.uri}}">{{main1.title}}</a></h5>
+    <img src="{{main1.img}}"/>
+    <p>{{main1.content}}</p>
     </div>
     <div class="live-score">
                <iframe src="http://www.tablesleague.com/iframe?width=320&height=1050&font_name=Tahoma&position=1&font_size=12&team_link=1&link_color=404040&games=1&wins=0&draws=0&lost=0&goals=1&goals_against=1&gd=1&points=1&next=0&form=1&font_size=12&font_color=000000&bg_color=ffffff&header_font_color=FFFFFF&header_bg_color=a41010&bg_col=1fb9e4&font_color_col=FFFFFF&highlight=e3e3e3&hover=fff6bf&league_header=1&league=l_145&team=&timezone=2&language=2&team_flags=0" width="100%" frameborder="0" scrolling="no"></iframe>
@@ -77,7 +77,7 @@
     <article>
     <section class="main-content-article">
         <a href="#/single-news/{{main12.uri}}"><h3>{{main12.title}}</h3></a>
-        <p class="main-article-subhead">BY {{main12.author}} &nbsp;&nbsp IN <a href="#">{{main12.category}}</a> &nbsp;&nbsp{{main12.date}}</p>
+        <p class="main-article-subhead">BY {{main12.author}} &nbsp;&nbsp IN <a href="#/categories/{{main12.category}}">{{main12.category}}</a> &nbsp;&nbsp{{main12.date}}</p>
         <img src="{{main12.img}}">
         <p class="news-content">{{main12.content}}</p>
     <a class="read-more-btn" href="#/single-news/{{main12.uri}}">READ MORE</a>
@@ -86,7 +86,7 @@
     <article>
     <section class="main-content-article">
         <a href="#/single-news/{{main13.uri}}"><h3>{{main13.title}}</h3></a>
-        <p class="main-article-subhead">BY {{main15.author}} &nbsp;&nbsp IN <a href="#">{{main13.category}}</a> &nbsp;&nbsp{{main13.date}}</p>
+        <p class="main-article-subhead">BY {{main15.author}} &nbsp;&nbsp IN <a href="#/categories/{{main13.category}}">{{main13.category}}</a> &nbsp;&nbsp{{main13.date}}</p>
         <img src="{{main13.img}}">
         <p class="news-content">{{main13.content}}</p>
     <a class="read-more-btn" href="#/single-news/{{main13.uri}}">READ MORE</a>
@@ -99,5 +99,7 @@
         <li><a href="#">4</a></li>
         <li><a href="#">5</a></li>
     </ul>
-
 </main>
+<footer>
+    SPORTS NEWS 2017 Telerik Acedemy Project by Rumen Tsanov
+</footer>

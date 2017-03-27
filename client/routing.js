@@ -4,6 +4,8 @@ const router = {
 
         const data = new Data();
 
+        let currentURI;
+
         appRouter
             .on({
                 '/home': () => {
@@ -90,18 +92,65 @@ const router = {
                 '/categories/:category': (params) => {
                     data.getDataByCategory(params.category)
                         .then((dataObj) => {
-                            console.log(dataObj);
-                            templateLoader.compile('football')
-                                .then(function(tempalte) {
-                                    let footballNews = {
-                                        football1: dataObj[0],
-                                        football2: dataObj[1],
-                                        football3: dataObj[2],
-                                        football4: dataObj[3]
-                                    };
-                                    console.log(footballNews);
-                                    $('#content').html(tempalte(footballNews));
-                                });
+                            console.log(dataObj[0].category);
+                            switch (dataObj[0].category) {
+                                case 'FOOTBALL':
+                                    templateLoader.compile('football')
+                                        .then(function(tempalte) {
+                                            let footballNews = {
+                                                football1: dataObj[0],
+                                                football2: dataObj[1],
+                                                football3: dataObj[2],
+                                                football4: dataObj[3],
+                                                football5: dataObj[4],
+                                                football6: dataObj[5]
+                                            };
+                                            $('#content').html(tempalte(footballNews));
+                                        });
+                                    break;
+                                case 'BASKETBALL':
+                                    templateLoader.compile('basketball')
+                                        .then(function(tempalte) {
+                                            let basketballNews = {
+                                                basketball1: dataObj[0],
+                                                basketball2: dataObj[1],
+                                                basketball3: dataObj[2],
+                                                basketball4: dataObj[3],
+                                                basketball5: dataObj[4],
+                                                basketball6: dataObj[5]
+                                            };
+                                            $('#content').html(tempalte(basketballNews));
+                                        });
+                                    break;
+                                case 'TENNIS':
+                                    templateLoader.compile('tennis')
+                                        .then(function(tempalte) {
+                                            let tennisNews = {
+                                                tennis1: dataObj[0],
+                                                tennis2: dataObj[1],
+                                                tennis3: dataObj[2],
+                                                tennis4: dataObj[3],
+                                                tennis5: dataObj[4],
+                                                tennis6: dataObj[5]
+                                            };
+                                            $('#content').html(tempalte(tennisNews));
+                                        });
+                                    break;
+                                case 'FIGHT SPORTS':
+                                    templateLoader.compile('fight-sports')
+                                        .then(function(tempalte) {
+                                            let fightNews = {
+                                                fight1: dataObj[0],
+                                                fight2: dataObj[1],
+                                                fight3: dataObj[2],
+                                                fight4: dataObj[3],
+                                                fight5: dataObj[4],
+                                                fight6: dataObj[5]
+                                            };
+                                            $('#content').html(tempalte(fightNews));
+                                        });
+                                    break;
+                            }
                         });
                 }
             })
@@ -109,7 +158,7 @@ const router = {
                 '/single-news/:uri': (params) => {
                     data.getDataByURI(params.uri)
                         .then((dataObj) => {
-                            console.log(dataObj);
+                            currentURI = params.uri;
                             templateLoader.compile('single-news')
                                 .then(function(tempalte) {
                                     $('#content').html(tempalte(dataObj[0]));
@@ -120,9 +169,22 @@ const router = {
 
             })
             .on({
-                '/post-comment': () => {
-                    data.putComment();
+                '/comment': () => {
+                    let inputValue = $('#comments-text').val();
+                    console.log(inputValue);
+                    if (inputValue !== '') {
+                        let comment = { value: inputValue, username: localStorage.getItem('username') };
+                        let options = {
+                            data: { comment: comment }
+                        };
+                        console.log(options);
+                        $('#comments-text').val('');
+                        data.putNewsComment(currentURI, options).then((d) => {
+                            console.log(d);
+                            appRouter.navigate('/single-news/' + currentURI);
+                        });
 
+                    }
                 }
 
             })

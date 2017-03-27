@@ -70,7 +70,7 @@ apiRouter.get('/news/:uri', (req, res, next) => {
 });
 apiRouter.get('/categories/:category', (req, res, next) => {
     db['main-news']
-        .find({ category: 'FOOTBALL' }, (err, news) => {
+        .find({ category: req.params.category }, (err, news) => {
             if (err) {
                 res.send(err);
             }
@@ -79,17 +79,30 @@ apiRouter.get('/categories/:category', (req, res, next) => {
         })
 });
 
-apiRouter.put('/news/:uri', (req, res, next) => {
-    db['main-news'].findAndModify({
-        query: { uri: req.params.uri },
-        update: { $push: { 'comments': req.body } },
-        new: true
-    }, (err, comment) => {
-        if (err) {
-            res.send(err);
-        }
-        res.json(comment);
-    })
+
+// apiRouter.put('/news/:id', function(req, res, next) {
+//     let comment = req.body.comment;
+//     let updatedImage = { $push: { comments: comment } };
+
+//     db['main-news'].update({ _id: mongojs.ObjectId(req.params.id) }, updatedImage, {},
+//         (err, comment) => {
+//             if (err) {
+//                 res.send(err);
+//             }
+//             res.json(comment);
+//         })
+// });
+apiRouter.put('/news/:uri', function(req, res, next) {
+    let comment = req.body.comment;
+    let updatedImage = { $push: { comments: comment } };
+
+    db['main-news'].update({ uri: req.params.uri }, updatedImage, {},
+        (err, comment) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json(comment);
+        })
 });
 
 apiRouter.get('/users', (req, res, next) => {
