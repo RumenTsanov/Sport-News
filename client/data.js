@@ -28,16 +28,15 @@ class Data {
             if (username === '' || email === '' || password === '') {
                 throw new Error('Invalid registration!');
             } else {
+                localStorage.setItem('username', username);
                 let newUser = {
                     username: username,
                     email: email,
                     password: password
                 };
-                console.log(newUser);
                 let options = {
                     data: newUser
                 };
-                console.log(options);
                 $('#userNameReg').val('');
                 $('#emailReg').val('');
                 $('#passReg').val('');
