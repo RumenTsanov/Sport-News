@@ -128,7 +128,7 @@ apiRouter.post('/users', (req, res, next) => {
 });
 
 // connection on port
-const port = 3003
+const port = process.env.PORT || 3003;
 app.listen(port);
-console.log(`Server running on port:${port}`);
-require('openurl').open(`http://localhost:${port}`);
+console.log(`Server running on http://localhost:${port}`);
+//require('openurl').open(`http://localhost:${port}`);

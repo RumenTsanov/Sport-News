@@ -634,7 +634,7 @@ main {
 .live-score>iframe {
     height: 980px;
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .main-aside>h3 {

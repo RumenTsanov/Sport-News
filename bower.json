@@ -1,17 +1,23 @@
 {
-  "name": "final-exam",
-  "authors": [
-    "RumenTsanov <rumentsanov88@gmail.com>"
-  ],
-  "description": "",
-  "main": "",
-  "license": "MIT",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "name": "final-exam",
+    "authors": [
+        "RumenTsanov <rumentsanov88@gmail.com>"
+    ],
+    "description": "",
+    "main": "",
+    "license": "MIT",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "^3.2.1",
+        "navigo": "^4.3.4",
+        "handlebars": "^4.0.5",
+        "bootstrap": "^3.3.7"
+    }
 }
