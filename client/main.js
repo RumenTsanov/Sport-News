@@ -14,11 +14,16 @@ $("#search-button").on("click", function() {
     data.getData()
         .then(function(dataObj) {
             let searchVal = $('#search-criteria').val();
-            console.log(searchVal);
+            console.log(searchVal[0]);
             let len = dataObj.length;
+            console.log(len);
             let result;
             for (let i = 0; i < len; i += 1) {
-                let result = dataObj[i];
+                result = dataObj[i].title;
+                if (result === searchVal) {
+                    console.log("here");
+
+                }
             }
             console.log(result);
             $('#search-criteria').val('');

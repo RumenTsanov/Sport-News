@@ -9,8 +9,8 @@
         <h4 class="spcial-heading-1">{{main9.title}}<h4></a>
     </div>
     <div class="main-2-1 main3-hoverable">
-        <a href="#/single-news/{{main3.uri}}"><img src={{main3.img}} class="main-image3">
-        <h4 class="spcial-heading-2">{{main3.title}}<h4></a>
+        <a href="#/single-news/{{main4.uri}}"><img src={{main4.img}} class="main-image3">
+        <h4 class="spcial-heading-2">{{main4.title}}<h4></a>
     </div>
     </div>
     <div class="news aside">
@@ -18,38 +18,47 @@
         </div>
     </div>
 <div class="live-news example1">
-    <p><a href="#/single-news/{{main4.uri}}" id="liveNews">{{main4.title}}</a></p>
+    <p><a href="#/single-news/{{main3.uri}}" id="liveNews">{{main3.title}}</a></p>
 </div>
 
 <div id="sub-news">
 <div class="sub-news-article">
     <h6>{{main8.category}}</h6>
     <h5><a href="#/single-news/{{main8.uri}}">{{main8.title}}</a></h5>
+    <div>
     <img src="{{main8.img}}"/>
-    <p>{{main8.content}}</p>
+    {{main8.content}}
+    </div>
     <a href="#/single-news/{{main8.uri}}">READ MORE</a> <p class="date">{{main8.date}}</p>
 </div>
 <div class="sub-news-article">
     <h6>{{main5.category}}</h6>
     <h5><a href="#/single-news/{{main5.uri}}">{{main5.title}}</a></h5>
+    <div>
     <img src="{{main5.img}}"/>
-    <p>{{main5.content}}</p>
+    {{main5.content}}
+    </div>
     <a href="#/single-news/{{main5.uri}}">READ MORE</a> <p class="date">{{main5.date}}</p>
 </div>
 <div class="sub-news-article">
     <h6>{{main10.category}}</h6>
     <h5><a href="#/single-news/{{main10.uri}}">{{main10.title}}</a></h5>
+    <div>
     <img src="{{main10.img}}"/>
-    <p>{{main10.content}}</p>
+    {{main10.content}}
+    </div>
     <a href="#/single-news/{{main10.uri}}">READ MORE</a> <p class="date">{{main10.date}}</p>
 </div>
 <div class="sub-news-article">
     <h6>{{main11.category}}</h6>
     <h5><a href="#/single-news/{{main11.uri}}">{{main11.title}}</a></h5>
+    <div>
     <img src="{{main11.img}}"/>
-    <p>{{main11.content}}</p>
+    {{main11.content}}
+    </div>
     <a href="#/single-news/{{main11.uri}}">READ MORE</a> <p class="date">{{main11.date}}</p>
 </div>
+
 </div>
 
 <main>
@@ -78,8 +87,10 @@
     <section class="main-content-article">
         <a href="#/single-news/{{main12.uri}}"><h3>{{main12.title}}</h3></a>
         <p class="main-article-subhead">BY {{main12.author}} &nbsp;&nbsp IN <a href="#/categories/{{main12.category}}">{{main12.category}}</a> &nbsp;&nbsp{{main12.date}}</p>
+        <div class="news-content">
         <img src="{{main12.img}}">
-        <p class="news-content">{{main12.content}}</p>
+        {{main12.content}}
+        </div>
     <a class="read-more-btn" href="#/single-news/{{main12.uri}}">READ MORE</a>
     </section>
     </article>
@@ -87,8 +98,10 @@
     <section class="main-content-article">
         <a href="#/single-news/{{main13.uri}}"><h3>{{main13.title}}</h3></a>
         <p class="main-article-subhead">BY {{main15.author}} &nbsp;&nbsp IN <a href="#/categories/{{main13.category}}">{{main13.category}}</a> &nbsp;&nbsp{{main13.date}}</p>
+        <div class="news-content">
         <img src="{{main13.img}}">
-        <p class="news-content">{{main13.content}}</p>
+        {{main13.content}}
+        </div>
     <a class="read-more-btn" href="#/single-news/{{main13.uri}}">READ MORE</a>
     </section>
     </article>
