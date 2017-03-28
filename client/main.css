@@ -189,11 +189,12 @@ s:-moz-placeholder {
 }
 
 footer {
-    margin-top: 130%;
+    margin-top: 133%;
     text-align: center;
     padding: 10px;
-    border-top: 1px solid #686868;
+    border-top: 1px solid #c1c1c1;
     width: 97%;
+    color: #525252;
 }
 
 .modal-btn {
@@ -471,7 +472,7 @@ h4 {
     height: 80px;
     float: right;
     padding-top: 3px;
-    margin-left: 5px;
+    padding-left: 10px;
 }
 
 .sub-news-article>div {
@@ -684,7 +685,7 @@ main {
 
 .pages {
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 200px;
 }
